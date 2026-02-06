@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.question-card {
+  background-color: var(--Helply-green);
+  width: 45vw;
+  border-radius: 5vh;
+  padding: 2vh;
+  margin-top: 2vh;
+  text-align: left;
+}
+.Timestamp {
+  text-align: right;
+}
+
+:root {
+  --Helply-black: #071922;
+  --Helply-teal: #31a5af;
+  --Helply-green: #8ecdbb;
+  --Heply-white: #dad3df;
+}
