@@ -8,7 +8,7 @@ const homePage = async (req, res) => {
     console.log("Fetched tickets:", response);
   } catch (error) {
     console.error("Error fetching tickets:", error);
-    res.status(500).render("error", { error: "Failed to fetch tickets" });
+    res.status(500).render("error", { message: "Failed to fetch tickets" });
   }
 };
 

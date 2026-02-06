@@ -1,10 +1,3 @@
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3vh;
-  flex: 1;
-}
 
 section h1 {
   color: var(--Helply-black);

@@ -6,6 +6,15 @@ body {
   min-height: 140vh;
   background-color: var(--Heply-white);
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh;
+  flex: 1;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
