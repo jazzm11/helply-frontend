@@ -1,12 +1,36 @@
-<%- include('partials/head') %> <%- include('partials/nav') %>
-<link rel="stylesheet" href="css/index.css" />
-<div class="container">
-  <h1>Welcome to Helply</h1>
-  <section class="question-card">
-    <p class="Timestamp">Timestamp:</p>
-    <h2>Title:</h2>
-    <h3>Author:</h3>
-  </section>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<%- include('partials/footer') %>
+<%- include('partials/head') %>
+
+  <body>
+    <%- include('partials/nav') %>
+      <link rel="stylesheet" href="/css/index.css" />
+
+      <section>
+        <h1>Welcome to Helply</h1>
+
+        <% if (data.length> 0) { %>
+          <div class="cards-container">
+            <% data.forEach(item=> { %>
+              <div class="card">
+                <h2>
+                  <%= item.title %>
+                </h2>
+                <% if (item.description) { %>
+                  <p>
+                    <%= item.description %>
+                  </p>
+                  <% } %>
+              </div>
+              <% }) %>
+          </div>
+          <% } else { %>
+            <p>No data available</p>
+            <% } %>
+      </section>
+
+      <%- include('partials/footer') %>
+  </body>
+
+</html>

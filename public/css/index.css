@@ -1,20 +1,58 @@
-.container {
+section {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+  padding: 3vh;
+  flex: 1;
 }
-.question-card {
+
+section h1 {
+  color: var(--Helply-black);
+  margin-bottom: 3vh;
+  font-size: 2.5em;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 60%;
+  padding: 0 5vw;
+}
+
+.card {
   background-color: var(--Helply-green);
-  width: 45vw;
-  border-radius: 5vh;
+  border-radius: 1vh;
   padding: 2vh;
-  margin-top: 2vh;
-  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
 }
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  color: var(--Helply-black);
+  margin: 0 0 1vh 0;
+  font-size: 1.3em;
+}
+
+.card p {
+  color: #333;
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
 .Timestamp {
   text-align: right;
+  color: #666;
+  font-size: 0.85em;
 }
 
 :root {
