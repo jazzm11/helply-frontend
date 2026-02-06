@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Arial;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   min-height: 140vh;
   background-color: var(--Heply-white);
 }
@@ -12,24 +12,63 @@ body {
   background-color: var(--Helply-black);
   color: var(--Helply-teal);
   justify-content: space-between;
-  padding-right: 2vw;
+  align-items: center;
+  padding: 1vh 2vw;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 .navbar a {
   color: var(--Helply-teal);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+.navbar a:hover {
+  color: var(--Helply-green);
+}
+
 .navbar img {
-  height: 10vh;
-  margin: 1vw;
+  height: 8vh;
+  margin: 0;
+  transition: transform 0.3s ease;
 }
+
+.navbar img:hover {
+  transform: scale(1.05);
+}
+
 .nav-list {
   display: flex;
   list-style: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2vw;
-  font-size: 30px;
+  gap: 3vw;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.8vh 1.5vw;
+  border-radius: 0.5vh;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  background-color: rgba(49, 165, 175, 0.1);
+  color: var(--Helply-green);
+  padding: 0.8vh 1.8vw;
 }
 .footer {
   background-color: var(--Helply-black);
