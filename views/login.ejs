@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-  <link rel="stylesheet" href="/css/auth.css" />
 
-  <body>
+    <body>
+        <%- include('partials/nav') %>
+            <link rel="stylesheet" href="/css/auth.css" />
 
-    <%- include('partials/nav') %>
+            <section>
+                <div class="auth-card">
 
-      <section>
-        <div class="auth-card">
-          <h1>Sign In</h1>
-          <form action="/login" method="POST">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" />
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
-            <button type="submit">Submit</button>
-          </form>
-          <p>Dont have an account? <a href="/signup">Sign up</a></p>
-        </div>
+                    <h1>Sign In </h1>
+                    <form action="/signin" method="POST">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" />
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" />
+                        <button type="submit">Submit</button>
+                        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+                    </form>
+                </div>
+            </section>
 
-      </section>
-
-      <%- include('partials/footer') %>
-  </body>
+            <%- include('partials/footer') %>
+    </body>
 
 </html>
