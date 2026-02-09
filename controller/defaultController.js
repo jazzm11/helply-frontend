@@ -28,5 +28,5 @@ module.exports = {
   homePage,
   login,
   signup,
-  profilePge
+  profilePage
 };
