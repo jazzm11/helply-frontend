@@ -1,16 +1,17 @@
 <%- include('partials/head') %>
-<link rel="stylesheet" href="/css/auth.css" />
-<body>
-  <%- include('partials/nav') %>
-  <section class="auth-card">
-    <form action="/login" method="POST">
-      <label for="username">Username</label>
-      <input type="text" name="username" id="username" />
-      <label for="">Password</label>
-      <input type="password" name="password" id="password" />
-      <button type="submit">Submit</button>
-    </form>
-    <p>Dont have an account <a href="/signup">sign up</a></p>
-  </section>
-  <%- include('partials/footer') %>
-</body>
+  <link rel="stylesheet" href="/css/auth.css" />
+
+  <body>
+    <%- include('partials/nav') %>
+      <section class="auth-card">
+        <form action="/login" method="POST">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" />
+          <label for="">Password</label>
+          <input type="password" name="password" id="password" />
+          <button type="submit">Submit</button>
+        </form>
+        <p>Dont have an account <a href="/signup">sign up</a></p>
+      </section>
+      <%- include('partials/footer') %>
+  </body>
