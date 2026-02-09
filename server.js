@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: `${process.env.HOST}`,
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
-    allowedHeaders: { 'Content-Type:': 'application/json' },
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 
