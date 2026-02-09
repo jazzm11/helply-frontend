@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+    <body>
+        <%- include('partials/nav') %>
+            <link rel="stylesheet" href="/css/index.css" />
+
+            <section>
+                <h1>Profile Page</h1>
+
+                <div class="question-form">
+                    <form action="/submit-question" method="POST">
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" placeholder="Question Title" required>
+                        <label for="description">Question Description:</label>
+                        <textarea name="description" placeholder="Question Description" required></textarea>
+                        <button type="submit">Submit </button>
+                    </form>
+                </div>
+
+                <h2>Your Questions</h2>
+
+                <% if (data.length> 0) { %>
+                    <div class="users-posts">
+                        <div class="users-questions">
+                            <div>
+                                <h2>
+                                    Title: <%= item.title %>
+                                </h2>
+                                <p class="Timestamp">
+                                    Timestamp: <%= item.timestamp %>
+                                </p>
+                            </div>
+
+                            <p>
+                                Author: <%= item.author %>
+                            </p>
+
+                            <p>
+                                Question Description: <%= item.description %>
+                            </p>
+                        </div>
+                    </div>
+                    <% } else { %>
+                        <p>No questions available</p>
+                        <% } %>
+            </section>
+
+            <%- include('partials/footer') %>
+    </body>
+
+</html>

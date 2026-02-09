@@ -12,6 +12,11 @@ const homePage = async (req, res) => {
   }
 };
 
+// Profile page controller - flytt dette hvis vi lager en controlleren for profile siden
+const profilePage = async (req, res) => {
+  res.render("profile", { data: [] });
+}
+
 const login = (req, res) => {
   res.render('login');
 };
@@ -23,4 +28,5 @@ module.exports = {
   homePage,
   login,
   signup,
+  profilePge
 };
