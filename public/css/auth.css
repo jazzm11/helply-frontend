@@ -1,0 +1,35 @@
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Helply-green);
+  width: 50vw;
+  max-width: 90%;
+  margin: 10vh auto;
+  border-radius: 2vh;
+}
+.auth-card label {
+  font-size: 3.5vh;
+}
+.auth-card input {
+  width: 100%;
+  padding: 1.5vw;
+  border: none;
+  border-radius: 2vh;
+  margin-bottom: 2vh;
+}
+.auth-card button {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5vh 10vw;
+  border: none;
+  border-radius: 2vh;
+  background: var(--Helply-teal);
+  color: #fff;
+}
+
+:root {
+  --Helply-black: #071922;
+  --Helply-teal: #31a5af;
+  --Helply-green: #8ecdbb;
+  --Heply-white: #dad3df;
+}
