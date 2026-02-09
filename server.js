@@ -4,12 +4,9 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// App Setup
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-
-// Import and use the default router
-const defaultRouter = require('./router/defaultRouter');
-
 app.use(
   cors({
     origin: `${process.env.HOST}`,
@@ -17,6 +14,9 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
+
+// Import and use the default router
+const defaultRouter = require('./router/defaultRouter');
 
 // Routes
 app.use(defaultRouter);

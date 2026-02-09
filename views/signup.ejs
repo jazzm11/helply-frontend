@@ -1,19 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
 <%- include('partials/head') %>
-<link rel="stylesheet" href="/css/auth.css" />
-<script src="script/signup.js" defer></script>
-<body>
-  <%- include('partials/nav') %>
-  <section class="auth-card">
-    <form>
-      <label for="username">Username</label>
-      <input type="text" name="username" id="username" />
-      <label for="">Password</label>
-      <input type="password" name="password" id="password" />
-      <label for="">Confirm Password</label>
-      <input type="password" name="confPassword" id="confPassword" />
-      <button type="submit">Submit</button>
-    </form>
-    <p>Already have an account <a href="/login">log in</a></p>
-  </section>
-  <%- include('partials/footer') %>
-</body>
+  <link rel="stylesheet" href="/css/auth.css" />
+
+  <body>
+
+    <%- include('partials/nav') %>
+
+      <section>
+        <div class="auth-card">
+          <h1>Sign Up</h1>
+          <form action="/signup" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+            <label for="confPassword">Confirm Password</label>
+            <input type="password" name="confPassword" id="confPassword" />
+            <button type="submit">Submit</button>
+          </form>
+          <p>Already have an account? <a href="/signin">Sign In</a></p>
+        </div>
+
+      </section>
+
+      <%- include('partials/footer') %>
+  </body>
+</html>
+

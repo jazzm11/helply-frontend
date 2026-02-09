@@ -13,32 +13,34 @@ section h1 {
 }
 
 .card {
-  background-color: var(--Helply-green);
-  border-radius: 1vh;
-  padding: 2vh;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  background: linear-gradient(135deg, var(--Helply-green) 0%, #7ec0a5 100%);
+  border-radius: 1.2vh;
+  padding: 2.5vh 3vh;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   cursor: pointer;
+  border-left: 5px solid var(--Helply-teal);
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--Helply-black);
 }
 
 .card h2 {
   color: var(--Helply-black);
   margin: 0 0 1vh 0;
   font-size: 1.3em;
+  font-weight: 600;
 }
 
 .card p {
-  color: #333;
-  margin: 0;
-  font-size: 0.95em;
-  line-height: 1.5;
+  color: var(--Helply-black);
+  margin: 0.5vh 0;
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .Timestamp {
