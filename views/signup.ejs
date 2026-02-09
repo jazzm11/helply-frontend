@@ -1,0 +1,19 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="/css/auth.css" />
+<script src="script/signup.js" defer></script>
+<body>
+  <%- include('partials/nav') %>
+  <section class="auth-card">
+    <form action="/signup" method="POST">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <label for="">Password</label>
+      <input type="password" name="password" id="password" />
+      <label for="">Confirm Password</label>
+      <input type="password" name="confPassword" id="confPassword" />
+      <button type="submit">Submit</button>
+    </form>
+    <p>Already have an account <a href="/login">log in</a></p>
+  </section>
+  <%- include('partials/footer') %>
+</body>
