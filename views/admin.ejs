@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+        <%- include('partials/nav') %>
+            <link rel="stylesheet" href="/css/admin.css" />
+
+            <section>
+                <h1>Admin Panel</h1>
+                <div class="admin-container">
+                    <h2>Students Post's</h2>
+                    <% if (posts.length> 0) { %>
+                        <% posts.forEach(post=> { %>
+                            <div class="users-posts">
+                                <div class="post-details">
+                                    <h3>Title: <%= post.title %>
+                                    </h3>
+                                    <p>Status: <%= post.status %>
+                                    </p>
+                                </div>
+                                <h4>User: <%= post.author %>
+                                </h4>
+
+                            </div>
+                            <% }) %>
+                                <% } else { %>
+                                    <p>No posts available.</p>
+                                    <% } %>
+                </div>
+
+            </section>
+
+            <%- include('partials/footer') %>
+    </body>
+
+</html>
