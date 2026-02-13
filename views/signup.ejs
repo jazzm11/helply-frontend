@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-
+<script src="/script/signup.js" defer></script>
     <body>
         <%- include('partials/nav') %>
             <link rel="stylesheet" href="/css/auth.css" />
@@ -10,7 +10,7 @@
                 <div class="auth-card">
 
                     <h1>Sign Up</h1>
-                    <form action="/signup" method="POST">
+                    <form >
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" />
                         <label for="password">Password</label>
