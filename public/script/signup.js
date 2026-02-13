@@ -7,7 +7,7 @@ const conPass = form.confPassword.value
 
 
 
-  const res = await fetch("http://10.12.18.201:6001/user/signUp",{
+  const res = await fetch("http://localhost:6001/user/signUp",{
     method: "POST",
     body: JSON.stringify({name,passwd,conPass}),
     headers: {"Content-Type":"application/json"}
@@ -16,6 +16,6 @@ const conPass = form.confPassword.value
   const data = await res.json()
 
   if(data.token){
-    window.location.href = "/"
+    window.location.href = `/cookie/${data.token}`;
   }
 });
