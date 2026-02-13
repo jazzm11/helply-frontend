@@ -17,9 +17,15 @@ app.use(
 
 // Import and use the default router
 const defaultRouter = require('./router/defaultRouter');
+const authRouter = require('./router/authRouter');
+const authorizedRouter = require('./router/authorizedRouter');
 
 // Routes
 app.use(defaultRouter);
+
+app.use(authRouter)
+
+app.use(authorizedRouter)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
