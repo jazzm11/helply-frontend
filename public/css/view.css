@@ -47,3 +47,29 @@
   font-size: 1em;
   line-height: 1.6;
 }
+
+.comment-form {
+  background-color: var(--Helply-green);
+  border-radius: 1.5vh;
+  width: 10vw;
+  margin: 0 auto 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 100%;
+}
+
+.comment-form input {
+  padding: 1vh;
+  border: none;
+  border-radius: 2vh;
+  background-color: #fff;
+  color: var(--Helply-black);
+  height: 3vh;
+}
