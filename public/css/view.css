@@ -5,53 +5,45 @@
   --Heply-white: #dad3df;
 }
 
-.admin-container {
+/* container for the single post */
+.users-posts {
+  background-color: var(--Helply-green);
+  padding: 3vh;
+  border-radius: 1.5vh;
+  margin-bottom: 4vh;
+  width: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* height not fixed here, let content determine it */
+}
+
+.users-questions {
   display: flex;
   flex-direction: column;
-  padding: 5vh 0;
-  width: 50%;
 }
 
-.users-posts {
+.users-questions div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: linear-gradient(135deg, var(--Helply-green) 0%, #7ec0a5 100%);
-  padding: 2.5vh 3vh;
-  border-radius: 1.2vh;
-  margin: 1.8vh 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border-left: 5px solid var(--Helply-teal);
 }
 
-.users-posts:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-left-color: var(--Helply-black);
-}
-
-.post-details h3 {
+.users-questions h2 {
   color: var(--Helply-black);
-  margin: 0 0 0.8vh 0;
-  font-size: 1.25em;
-  font-weight: 600;
+  margin: 0 0 1.5vh 0;
+  font-size: 1.4em;
+  font-weight: 700;
 }
 
-.post-details p {
-  margin: 0.5vh 0;
-  font-size: 1.05rem;
+.card-quoestion {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vh;
+  padding: 2vh;
+  margin-top: 1.5vh;
+  border-left: 4px solid var(--Helply-black);
+}
+
+.card-quoestion p {
   color: var(--Helply-black);
-  font-weight: 500;
-}
-
-.users-posts h4 {
-  color: white;
   margin: 0;
-  font-size: 1.1em;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 1vh 1.8vh;
-  border-radius: 0.8vh;
-  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.6;
 }

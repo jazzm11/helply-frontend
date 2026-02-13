@@ -2,27 +2,28 @@
 <body>
   <link rel="stylesheet" href="/css/view.css">
   <section>
-                <h1>Other's post's</h1>
-                <div class="admin-container">
-                    <% if (posts.length> 0) { %>
-                        <% posts.forEach(post=> { %>
-                            <div class="users-posts">
-                                <div class="post-details">
-                                    <h2> <%= post.title %>
-                                    </h2>
-                                    <h3><%= post.author %>
-                                </h3>
-                                <p><%= post.content %></p>
-                                </div>
-                                
-
+                <h1>User's Post</h1>
+                <% if (data.length> 0) { %>
+                    <div class="users-posts">
+                        <div class="users-questions">
+                            <div>
+                                <h2>
+                                    <%= item.title %>
+                                </h2>
+                                <p class="Timestamp">
+                                  <%= item.timestamp %>
+                                </p>
                             </div>
-                            <% }) %>
-                                <% } else { %>
-                                    <p>No posts available.</p>
-                                    <% } %>
-                </div>
 
+                            <p>
+                              <%= item.author %>
+                            </p>
+
+                        </div>
+                    </div>
+                    <% } else { %>
+                        <p>No questions available</p>
+                        <% } %>
             </section>
   </div>
 </body>

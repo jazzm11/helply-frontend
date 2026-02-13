@@ -35,8 +35,7 @@ const signup = (req, res) => {
 
 const view = async (req, res) => {
   try {
-    const response = await getApiData('/sixLatest');
-    res.render('view', { posts: response.Tickets || [] });
+    res.render('view', { data: [] });
   } catch (err) {
     console.log(err);
   }
