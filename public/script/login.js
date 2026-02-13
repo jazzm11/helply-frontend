@@ -16,6 +16,6 @@ form.addEventListener("submit", async (e) => {
     console.log(data.err)
   }
   if (data.token) {
-    window.location.href = "/";
+    window.location.href = `/cookie/${data.token}`;
   }
 });
