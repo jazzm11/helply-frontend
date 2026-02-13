@@ -14,8 +14,8 @@ const homePage = async (req, res) => {
 
 // User Controllers
 const profilePage = async (req, res) => {
-  res.render("profile", { data: [] });
-}
+  res.render('profile', { data: [] });
+};
 const adminPage = async (req, res) => {
   try {
     const response = await getApiData('/sixLatest');
@@ -33,10 +33,20 @@ const signup = (req, res) => {
   res.render('signup');
 };
 
+const view = async (req, res) => {
+  try {
+    const response = await getApiData('/sixLatest');
+    res.render('view', { posts: response.Tickets || [] });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   homePage,
   login,
   signup,
   profilePage,
   adminPage,
+  view,
 };

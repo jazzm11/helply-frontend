@@ -1,0 +1,29 @@
+<%- include('partials/head') %> <%- include('partials/nav') %>
+<body>
+  <link rel="stylesheet" href="/css/view.css">
+  <section>
+                <h1>Other's post's</h1>
+                <div class="admin-container">
+                    <% if (posts.length> 0) { %>
+                        <% posts.forEach(post=> { %>
+                            <div class="users-posts">
+                                <div class="post-details">
+                                    <h2> <%= post.title %>
+                                    </h2>
+                                    <h3><%= post.author %>
+                                </h3>
+                                <p><%= post.content %></p>
+                                </div>
+                                
+
+                            </div>
+                            <% }) %>
+                                <% } else { %>
+                                    <p>No posts available.</p>
+                                    <% } %>
+                </div>
+
+            </section>
+  </div>
+</body>
+<%- include('partials/footer') %>
