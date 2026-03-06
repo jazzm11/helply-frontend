@@ -1,21 +1,23 @@
 section h1 {
   color: var(--Helply-black);
   margin-bottom: 3vh;
-  font-size: 2.5em;
+  font-size: clamp(1.8rem, 5vw, 2.5em);
+  text-align: center;
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  width: 60%;
-  padding: 0 5vw;
+  gap: 2rem;
+  width: 95%;
+  max-width: 900px;
+  padding: 0 1rem;
 }
 
 .card {
   background: linear-gradient(135deg, var(--Helply-green) 0%, #7ec0a5 100%);
   border-radius: 1.2vh;
-  padding: 2.5vh 3vh;
+  padding: 2rem 2.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -30,15 +32,15 @@ section h1 {
 
 .card h2 {
   color: var(--Helply-black);
-  margin: 0 0 1vh 0;
-  font-size: 1.3em;
+  margin: 0 0 1rem 0;
+  font-size: clamp(1.1rem, 4vw, 1.3em);
   font-weight: 600;
 }
 
 .card p {
   color: var(--Helply-black);
-  margin: 0.5vh 0;
-  font-size: 1em;
+  margin: 0.5rem 0;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   line-height: 1.6;
   font-weight: 500;
 }
@@ -47,6 +49,54 @@ section h1 {
   text-align: right;
   color: #666;
   font-size: 0.85em;
+  margin-top: 1rem;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  section h1 {
+    margin-bottom: 2rem;
+  }
+
+  .cards-container {
+    width: 98%;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .card {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .cards-container {
+    width: 100%;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .card {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.8rem;
+  }
+
+  .card p {
+    margin: 0.4rem 0;
+  }
+
+  .Timestamp {
+    margin-top: 0.8rem;
+  }
 }
 
 :root {
