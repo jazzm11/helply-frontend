@@ -12,7 +12,7 @@
         <% if (data.length> 0) { %>
           <div class="cards-container">
             <% data.forEach(item=> { %>
-              <div class="card">
+              <a href="/view/<%= item._id %>" class="card">
                 <h2>
                   <%= item.title %>
                 </h2>
@@ -20,7 +20,7 @@
                   <%= item.author %>
                 </p>
                 <p class="Timestamp"><%= item.timestamp %></p>
-              </div>
+              </a>
               <% }) %>
           </div>
           <% } else { %>
