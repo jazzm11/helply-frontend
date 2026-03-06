@@ -10,6 +10,9 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+//Middleware
+const {checkCurrentUser}= require("./middleware/auth_user")
+
 // App Setup
 app.use(express.static('public'));
 
@@ -24,6 +27,8 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
+
+app.use(checkCurrentUser)
 
 // Import and use the default router
 const defaultRouter = require('./router/defaultRouter');
